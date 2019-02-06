@@ -13,6 +13,8 @@ params.append( 'before', before.unix() );
 params.append( 'after', after.unix() );
 params.append( 'subreddits', subreddits.join( ',' ) );
 params.append( 'q', searchTerm );
+params.append( 'aggs', 'created_utc' );
+params.append( 'frequency', 'day' );
 
 const url = `https://api.pushshift.io/reddit/comment/search?${params.toString()}`;
 
